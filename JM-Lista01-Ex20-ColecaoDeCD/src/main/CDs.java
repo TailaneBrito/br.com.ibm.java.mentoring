@@ -1,11 +1,26 @@
 package main;
 
-import java.util.TreeMap;
+import java.util.ArrayList;
 
 public class CDs {
 	public String nome;
 	public double valor;
-	public int quantidade;
+	//public int quantidade; 
+	
+	private static double valorTotal;
+	private static int contador;
+	
+	public CDs(String n, double v){
+		//CDs cd ;
+		setNome(n);
+		setValor(v);
+		
+		valorTotal += valor;
+		contador++;
+		
+				
+	}
+	
 	
 	public String getNome() {
 		return nome;
@@ -23,14 +38,18 @@ public class CDs {
 		this.valor = valor;
 	}
 
-	public int getQuantidade() {
-		return quantidade;
+	
+	public void colecaoCD(CDs cd){	
+		ArrayList<CDs> c = new ArrayList<>();
+		c.add(cd);
 	}
-
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
+	
+	private double mediaCD(){
+		return  (valorTotal / contador);
 	}
-
-	public void colecaoCD(String nome, int quantidade, double valor){
-		TreeMap t  = new TreeMap();
+	
+	public void verColecao(){
+		System.out.println("Total investido na colecao de " + contador + " CDs .....: " + valorTotal);
+		System.out.println("Media do valor por CD ...................: " + mediaCD());
 	}
+}	
