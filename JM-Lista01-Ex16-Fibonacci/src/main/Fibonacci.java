@@ -16,10 +16,7 @@ public class Fibonacci {
 			System.out.print(fibo + " ");
 		}
 		
-		
 	}
-	
-	
 	
 	public static void main(String[] args) {
 		Scanner l = new Scanner(System.in);

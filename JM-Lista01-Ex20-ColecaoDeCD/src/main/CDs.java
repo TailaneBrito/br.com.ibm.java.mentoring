@@ -17,8 +17,7 @@ public class CDs {
 		
 		valorTotal += valor;
 		contador++;
-		
-				
+					
 	}
 	
 	
